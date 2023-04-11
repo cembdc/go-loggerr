@@ -5,8 +5,12 @@ WORKDIR /app
 COPY go.* ./
 
 RUN go mod download
+RUN apk update
+RUN apk add make
 
 COPY . ./
+
+RUN make all
 
 FROM alpine
 
