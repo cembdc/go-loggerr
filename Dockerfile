@@ -1,5 +1,7 @@
 FROM golang:1.20-alpine as build
 
+RUN apk --no-cache add make
+
 WORKDIR /app
 
 COPY go.* ./
