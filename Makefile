@@ -4,10 +4,10 @@ BIN_NAME := app
 GOOS := $(shell go env GOOS)
 GOARCH := $(shell go env GOARCH)
 
+.PHONY: all clean build run test crossbuild hello
+
 hello:
 	echo "Hello"
-
-.PHONY: all clean build run test crossbuild
 
 all: clean build
 
